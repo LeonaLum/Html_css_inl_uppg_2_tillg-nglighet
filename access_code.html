@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+
+  <!--FONT 1-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+
+  <!--FONT 2-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="wrapper">
+  <header class="header" title="Sidans header">
+    <h1 class="Biggest-heading">
+      <a href="index.html">Information om tillgänglighet på webben</a> 
+    </h1>
+  </header>
+
+
+
+  <nav class="nav-container">
+    <ul>
+      <li class="nav-item">
+        <a href="index.html">Vad betyder tillgänglighet?</a>
+      </li>
+      <li class="nav-item">
+        <a href="access_on_web.html">Vad innebär tillgänglighet på webben?</a>
+      </li>
+      <li class="nav-item">
+        <a href="how_should_acc_webb_look.html">Hur ska en tillgänglig webbplats se ut?</a>
+      </li>
+      <li class="nav-item">
+        <a href="access_code.html">Hur ska en frontend-utvecklare skapa tillgänglig kod?</a>
+      </li>
+      
+    </ul>
+  </nav>
+
+  <main class="flex-container">
+
+   <div class="container-4-pic" title="En datorskärm med kod på">
+   </div>
+
+   <section class="container-1-text">
+     <h2>Hur skapar vi tillgänglig kod?</h2>
+     <h3>Vad ska jag tänka på när jag kodar?</h3>
+     <ul>
+       <li>Använd dig av semantiska taggar, detta betyder att du använder dig av taggar som beskriver vilken typ av innehåll dem har.</li>
+       <li>
+        Skärmläsare behöver veta vilket språk sidan är på för att fungera, detta måste anges i koden.
+       </li>
+       <li>
+        Om webbsidan innhehåller formulär för inmatning så är det viktigt med stöd för potentiellt felaktigt ifyllda fält.
+        Felet måste markeras tydligt och användaren ska få en beskrivning av vad som är fel.
+       </li>
+       <li>
+        Formulärens rubriker ska helst använda sig av taggen label och obligatoriska fält ska markeras.
+       </li>
+       <li>
+        Ange gärna <em>kursiverad</em> text och <strong>viktig</strong> text mellan em och strong taggarna eftersom att skärmläsaren inte uppfattar dessa om du anger detta i css-filen.
+       </li>
+       <li>
+        Layouten ska kodas på ett flexibelt sätt med en responsiv design, använd dig gärna av media queries för att skapa förändringar beroende på skärmens storlek.
+      </li>
+     </ul>
+   </section>
+  </main>
+
+  <footer class="footer-container">
+    <h2>Vidareläsning om tillgänglighet:</h2>
+      <ul>
+       <li>
+         <a href="https://webbriktlinjer.se/wcag/?checklista">Webbriktlinjer.se</a>
+       </li>
+       <li>
+        <a href="http://www.w3c.se/resources/office/translations/wai/intro/accessibility.html">W3C.se</a>
+       </li>
+       <li>
+        <a href="https://www.funka.com/design-for-alla/lagar-och-regler/">Funka.com</a>
+       </li>
+      </ul>
+    
+
+  </footer>
+
+
+</div>
+  
+  
+</body>
+</html>

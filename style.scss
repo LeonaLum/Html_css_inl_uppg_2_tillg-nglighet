@@ -1,0 +1,219 @@
+//Jag använder mig av fonterna Dosis och anton
+//Efter kommat anger jag deras fallback-fonter
+$font-dosis: 'Dosis', sans-serif,Arial, Helvetica, sans-serif;
+$font-anton: 'Anton', sans-serif,Georgia, Verdana, sans-serif;
+$nav_footer-color:hsla(50, 64%, 56%, 0.212);
+$nav-item-color:hsla(0, 0%, 100%, 0.459);
+$white-color:white;
+$black-color:black;
+$smooth-borders:10px;
+$p-text-size:20px;
+//mixin för flex och wrap
+@mixin flex-and-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+.wrapper{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(238, 238, 238);
+}
+.header{
+  @include flex-and-wrap;
+  background-image: linear-gradient(to top,rgb(66, 95, 99) 10%), url(banner.jpg);
+  background-size: cover;
+  background-blend-mode: lighten;
+  height:150px;
+  flex-basis: 100%;
+  align-items: center;
+  .Biggest-heading{
+    @include flex-and-wrap;
+    font-family: $font-anton;
+    margin-left: 10px;
+    background-color: rgba(255, 255, 255, 0.473);
+    padding:10px;
+    border-radius: $smooth-borders;
+   a{
+     text-decoration: none;
+     color: rgb(61, 61, 61);
+   }
+  }
+}
+
+//header - desktop
+@media screen and (min-width:203px){
+  .header{
+    height:200px;
+  }
+}
+
+.nav-container{
+  @include flex-and-wrap;
+  font-family: $font-dosis;
+  background-color:$nav_footer-color;
+  flex-basis: 100%;
+  margin-bottom: 10px;
+ ul{
+  @include flex-and-wrap;
+  list-style: none;
+  padding:10px;
+ }
+ li{
+  padding:5px;
+ }
+ a{
+  @include flex-and-wrap;
+   text-decoration: none;
+   color: black;
+   background-color: $nav-item-color;
+   padding: 10px;
+   border-radius: $smooth-borders;
+
+   &:hover{
+     color:black;
+     background-color: $white-color;
+     font-weight: bold;
+   }
+ }
+}
+
+//nav - desktop
+@media screen and (min-width:730px){
+  .nav-container{
+    ul{
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+//Main_container
+.flex-container{
+  @include flex-and-wrap;
+  width: 100%;
+  background-color: rgb(233, 233, 233);
+  padding:20px;
+  justify-content: space-around;
+  align-items: flex-start;
+
+.container-1-pic{
+  background-image: url(support.jpg);
+  background-size: cover;
+  height: 150px;
+  width:450px;
+}
+//Picture-1 desktop version
+@media screen and (min-width:280px){
+  .container-1-pic{
+    height: 240px;
+    width:450px;
+  }
+}
+.container-2-pic{
+  background-image: url(webb.png);
+  background-size: cover;
+  height: 150px;
+  width:450px;
+}
+//Picture-2 desktop version
+@media screen and (min-width:340px){
+  .container-2-pic{
+    height: 300px;
+    width:450px;
+  }
+}
+.container-3-pic{
+  background-image: url(how.jpg);
+  background-size: cover;
+  height: 170px;
+  width:300px;
+}
+//Picture-3 desktop version
+@media screen and (min-width:490px){
+  .container-3-pic{
+    height: 300px;
+    width:450px;
+  }
+}
+.container-4-pic{
+  background-image: url(code.jpg);
+  background-size: cover;
+  height: 200px;
+  width:450px;
+}
+//Picture-4 desktop version
+@media screen and (min-width:410px){
+  .container-4-pic{
+    height: 300px;
+    width:450px;
+  }
+}
+
+.container-1-text{
+  background-color: $white-color;
+  width:450px;
+  text-align: center;
+  padding:10px 10px 30px 10px;
+  font-family: $font-dosis;
+  h2{
+    margin-bottom: 10px;
+  }
+  h3{
+    margin-top:10px;
+    font-size: 20px;
+  }
+  p,ul{
+    padding-top: 5px;
+    text-align: left;
+    font-size: $p-text-size;
+    li{
+      padding:5px;
+    }
+  }
+}
+}
+
+.footer-container{
+  @include flex-and-wrap;
+  flex-direction: column;
+  flex-basis: 100%;
+  background-color:$nav_footer-color;
+  padding:10px;
+  font-family: $font-dosis;
+  h2{
+    color: rgb(61, 61, 61);
+    margin-bottom: 10px;
+    background-color: $nav-item-color;
+    padding: 10px;
+  }
+  ul{
+    list-style: none;
+    margin:0px;
+    padding: 0px;
+
+    li{
+      display: inline-block;
+      margin:0px;
+      padding: 10px;
+    }
+  a{
+    text-decoration: none;
+    color:$black-color;
+    padding: 10px;
+    border-radius: $smooth-borders;
+
+    &:hover{
+      color:black;
+      background-color: $white-color;
+      font-weight: bold;
+    }
+  }
+  } 
+}
+
+
+
